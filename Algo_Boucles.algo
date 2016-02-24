@@ -1,0 +1,169 @@
+/* Algorithme & Programmation: */
+
+__5._Les_Boucles__
+
+"/* 5.4 Ecrire un algorithme qui demande un nombre de départ, et qui ensuite écrit 
+	la table de multiplication de ce nombre, présentée comme suit 
+	(cas où l'utilisateur entre le nombre 7) :
+	Table de 7 :
+	7 x 1 = 7
+	7 x 2 = 14
+	7 x 3 = 21
+	…
+	7 x 10 = 70  
+*/" 
+Variable Nombre en Entier
+Variable Nbre en Entier
+Variable Resultat en Entier 
+Début
+	Ecrire "tapez un nombre" 
+	Lire Nombre 
+	Ecrire "Table de " & Nombre & ":"
+	Pour Nbre <- 1 à 10 -- pas 1 -- pas obligatoire de 1 en 1
+		Resultat <- Nombre*Nbre
+	Ecrire Nombre & "x" & Nbre & "=" & Resultat 
+	Nbre Suivant 
+Fin 
+
+'/* 5.5 Ecrire un algorithme qui demande un nombre de départ, et qui calcule 
+	la somme des entiers jusqu’à ce nombre. Par exemple, si l’on entre 5, 
+	le programme doit calculer : 1 + 2 + 3 + 4 + 5 = 15
+	NB : on souhaite afficher uniquement le résultat, pas la décomposition du calcul
+*/'
+Variable Nombre, Compteur, Res en Entier
+Début
+	Ecrire "Tapez un nombre :" 
+	Lire Nombre
+	Res <- 0
+	Pour Compteur <- 1 à Nombre 
+		Res <- Res + Compteur
+		Res Suivant
+	FinPour
+	Ecrire "le résultat est " & Res
+Fin 
+
+'/* 5.6 Ecrire un algorithme qui demande un nombre de départ, 
+	et qui calcule sa factorielle.
+	NB : la factorielle de 8, notée 8 !, vaut 1 x 2 x 3 x 4 x 5 x 6 x 7 x 8 
+*/' 
+Variable Nombre, Compteur, Res en Entier 
+Début 
+	Ecrire "Tapez un nombre :" 
+	Lire Nombre
+	Res <- 1
+		Pour Compteur <- 2 à Nombre 
+		Res <- Res*Compteur
+		FinPour
+	Ecrire "la factorielle de " & Nombre & "est" & Res
+Fin 
+		
+'/* 5.7
+	Ecrire un algorithme qui demande successivement 20 nombres à l’utilisateur, 
+	et qui lui dise ensuite quel était le plus grand parmi ces 20 nombres :
+	Entrez le nombre numéro 1 : 12
+	Entrez le nombre numéro 2 : 14
+	etc.
+	Entrez le nombre numéro 20 : 6
+	Le plus grand de ces nombres est : 14
+	Modifiez ensuite l’algorithme pour que le programme affiche de surcroît en 
+	quelle position avait été saisie ce nombre :
+	C’était le nombre numéro 2  
+*/'
+Variable Nombre, Compteur, Maxi, Position en Entier
+Début
+	Ecrire "Entrez un nombre"
+	Lire Nombre
+	Maxi <- Nombre
+	Position <- 1
+		Pour Compteur <- 2 à 20
+		Ecrire "Entrez un nombre"
+		Lire Nombre
+			Si Nombre > Maxi Alors
+				Maxi <- Nombre 
+				Position <- Compteur
+			FinSi
+		FinPour
+Fin
+
+'/* 5.8
+	Réécrire l’algorithme précédent, mais cette fois-ci on ne connaît pas d’avance 
+	combien l’utilisateur souhaite saisir de nombres. La saisie des nombres s’arrête 
+	lorsque l’utilisateur entre un zéro.  */' 
+-> Correction de FRC :
+->Variable Nombre, compteur, maxi, position en Entier
+->Debut
+->	Ecrire "Entrez un nombre"
+->	Lire Nombre
+->	maxi <- Nombre
+->	position <- 1
+->	TantQue Nombre <> 0
+->		Ecrire "Entrez un nombre"
+->		Lire Nombre
+->		Si Nombre > maxi Alors
+->			maxi <- Nombre
+->			position <- compteur
+->		FinSi
+->	FinTantQue
+->Fin
+->-> à voir avec FRC car pas compris où est le "Compteur" !!!  
+
+
+'/* 5.9
+	Lire la suite des prix (en euros entiers et terminée par zéro) des achats d’un client. 
+	Calculer la somme qu’il doit, lire la somme qu’il paye, et simuler la remise de la 
+	monnaie en affichant les textes "10 Euros", "5 Euros" et "1 Euro" autant de fois qu’il 
+	y a de coupures de chaque sorte à rendre. */' 
+Variable Nombre, Somme, Reglement, Monnaie en Entier
+Début
+	Nombre <- -1
+	Somme <- 0
+	TantQue Nombre <> 0
+		Ecrire "Entrez le prix : "
+		Lire Nombre
+		Somme <- Somme + Nombre
+	FinTantQue
+
+	Ecrire "Entrez votre réglement"
+	Lire Reglement
+	Monnaie <- Somme - Reglement
+		TantQue Monnaie >= 10 Alors
+		Ecrire "Rendre un billet de 10 "
+		FinTantQue
+
+		TantQue Monnaie >= 5 Alors
+		Ecrire "Rendre un billet de 5 " 
+		FinTantQue
+
+		TantQue Monnaie >= 1 Alors 
+		Ecrire "Rendre un billet de 1 "
+		FinTantQue
+Fin 
+-> Autre solution très rapide :
+-> | Ecrire "Rendu de la monnaie :"
+-> | Ecrire "Billets de 10 E : ", Reste/10
+-> | Reste ← Reste % 10
+-> | Ecrire "Billets de 5 E : ", Reste/5
+-> | Reste ← Reste % 5
+-> | Ecrire "Pièces de 1 E : ", Reste
+-> |-> L’opérateur "/" permet de récupérer la valeur entière de la division ; 
+-> | L’opérateur "%" (modulo) permet de récupérer le reste de la division entière.
+
+
+'/* 5.10
+	Écrire un algorithme qui permette de connaître ses chances de gagner au tiercé, 
+	quarté, quinté et autres impôts volontaires.
+	On demande à l’utilisateur le nombre de chevaux partants, et le nombre de chevaux 
+	joués. Les deux messages affichés devront être :
+	Dans l’ordre : une chance sur X de gagner
+	Dans le désordre : une chance sur Y de gagner
+	X et Y nous sont donnés par la formule suivante, si n est le nombre de chevaux 
+	partants et p le nombre de chevaux joués (on rappelle que le signe ! signifie 
+	"factorielle", comme dans l''exercice 5.6 ci-dessus) :
+	X = n ! / (n - p) !
+	Y = n ! / (p ! * (n – p) !)
+	NB : cet algorithme peut être écrit d’une manière simple, mais relativement peu 
+	performante. Ses performances peuvent être singulièrement augmentées par une petite 
+	astuce. Vous commencerez par écrire la manière la plus simple, puis vous identifierez 
+	le problème, et écrirez une deuxième version permettant de le résoudre. */' 
+
+-> VOIR avec FRC car 2 solution dans la corection !!! 

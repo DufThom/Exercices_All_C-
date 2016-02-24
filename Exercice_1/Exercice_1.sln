@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercice_1", "Exercice_1\Exercice_1.csproj", "{7B5FF5DD-854F-4E5E-AAF0-490B715B008B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculatrice", "Calculatrice\Calculatrice.csproj", "{889A7F09-6E2E-4540-B008-5B7AB8A3D3D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Conv_Temperatur", "Conv_Temperatur\Conv_Temperatur.csproj", "{F5FBC53C-683A-438D-AD7F-FE300A835DA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoyEtudiant", "MoyEtudiant\MoyEtudiant.csproj", "{0FECE2B3-68FC-432F-9395-D5C752B59156}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConversDuree", "ConversDuree\ConversDuree.csproj", "{5CFFF9A8-9FB4-4B5E-A4BA-62D80C879C6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColorAndSound", "ColorAndSound\ColorAndSound.csproj", "{BAF5E676-1233-4EDB-B43B-5E283369EDF9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B5FF5DD-854F-4E5E-AAF0-490B715B008B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B5FF5DD-854F-4E5E-AAF0-490B715B008B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B5FF5DD-854F-4E5E-AAF0-490B715B008B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B5FF5DD-854F-4E5E-AAF0-490B715B008B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{889A7F09-6E2E-4540-B008-5B7AB8A3D3D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{889A7F09-6E2E-4540-B008-5B7AB8A3D3D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{889A7F09-6E2E-4540-B008-5B7AB8A3D3D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{889A7F09-6E2E-4540-B008-5B7AB8A3D3D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5FBC53C-683A-438D-AD7F-FE300A835DA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5FBC53C-683A-438D-AD7F-FE300A835DA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5FBC53C-683A-438D-AD7F-FE300A835DA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5FBC53C-683A-438D-AD7F-FE300A835DA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FECE2B3-68FC-432F-9395-D5C752B59156}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FECE2B3-68FC-432F-9395-D5C752B59156}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FECE2B3-68FC-432F-9395-D5C752B59156}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FECE2B3-68FC-432F-9395-D5C752B59156}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CFFF9A8-9FB4-4B5E-A4BA-62D80C879C6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CFFF9A8-9FB4-4B5E-A4BA-62D80C879C6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CFFF9A8-9FB4-4B5E-A4BA-62D80C879C6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CFFF9A8-9FB4-4B5E-A4BA-62D80C879C6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAF5E676-1233-4EDB-B43B-5E283369EDF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAF5E676-1233-4EDB-B43B-5E283369EDF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAF5E676-1233-4EDB-B43B-5E283369EDF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAF5E676-1233-4EDB-B43B-5E283369EDF9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
