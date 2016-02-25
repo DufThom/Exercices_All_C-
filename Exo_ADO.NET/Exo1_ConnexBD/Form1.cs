@@ -13,7 +13,7 @@ namespace Exo1_ConnexBD
 {
     public partial class Form1 : Form
     {
-        SqlConnection Connex; 
+        SqlConnection Connex; //création de "Connex" ici pour pouvoir l'utiliser partout dans ce Form
 
         public Form1()
         {

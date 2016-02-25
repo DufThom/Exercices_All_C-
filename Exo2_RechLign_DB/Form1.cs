@@ -51,6 +51,7 @@ namespace Exo2_RechLign_DB
                 MessageBox.Show(er.Message);
             }
 
+            Connex.Close();
 
         }
     }
