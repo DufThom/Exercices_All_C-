@@ -64,6 +64,12 @@ namespace Exo3_Rech_JeuLign
                 {
                     string d = Convert.ToDateTime(Result["DATCOM"]).ToShortDateString();
                     listBox1.Items.Add(Result["nomfou"].ToString() + " " + Result["numcom"].ToString() +" "+ d );
+
+                    //ListViewItem lvi = new ListViewItem(resultat["NUMCOM"].ToString());
+                    //lvi.SubItems.Add(d);
+                    //lvi.SubItems.Add(resultat["OBSCOM"].ToString());
+
+                    //listView1.Items.Add(lvi);
                 }
 
                 Connex.Close();
