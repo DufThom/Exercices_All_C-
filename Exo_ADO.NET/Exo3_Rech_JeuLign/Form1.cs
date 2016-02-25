@@ -58,6 +58,13 @@ namespace Exo3_Rech_JeuLign
                     SqlCommand Reqt = new SqlCommand("Select * from stg07.FOURNIS F join stg07.ENTCOM E on F.NUMFOU = E.NUMFOU where f.nomfou=@nomfou", Connex);
                     Reqt.Parameters.AddWithValue("@nomfou", comboBox1.SelectedItem);
                     Result = Reqt.ExecuteReader();
+
+                    // Exemple avec une procédure Stockée, à mettre dans SqlCommand, et à executer avec un ExecuteNonQuery : 
+                    ////create proc GetEntCom
+                    //@nomfou varchar(30)
+                    //as
+                    //select* from fournis join entcom on entcom.numfou = fournis.numfou where fournis.nomfou = @nomfou
+                    //exec GetEntCom 'MEDICIS'
                 }
 
                 while (Result.Read())
@@ -65,10 +72,10 @@ namespace Exo3_Rech_JeuLign
                     string d = Convert.ToDateTime(Result["DATCOM"]).ToShortDateString();
                     listBox1.Items.Add(Result["nomfou"].ToString() + " " + Result["numcom"].ToString() +" "+ d );
 
+               // Exemple d'un ListView : 
                     //ListViewItem lvi = new ListViewItem(resultat["NUMCOM"].ToString());
                     //lvi.SubItems.Add(d);
                     //lvi.SubItems.Add(resultat["OBSCOM"].ToString());
-
                     //listView1.Items.Add(lvi);
                 }
 
