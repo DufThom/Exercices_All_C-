@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{14051AA9-1B5A-409E-A274-AFEA940345AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{7451FC03-6DDD-4172-A250-9D805E0B0853}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{14051AA9-1B5A-409E-A274-AFEA940345AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14051AA9-1B5A-409E-A274-AFEA940345AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14051AA9-1B5A-409E-A274-AFEA940345AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14051AA9-1B5A-409E-A274-AFEA940345AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7451FC03-6DDD-4172-A250-9D805E0B0853}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7451FC03-6DDD-4172-A250-9D805E0B0853}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7451FC03-6DDD-4172-A250-9D805E0B0853}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7451FC03-6DDD-4172-A250-9D805E0B0853}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
