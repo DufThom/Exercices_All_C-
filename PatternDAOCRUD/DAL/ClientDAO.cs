@@ -25,7 +25,7 @@ namespace DAL
         }
 
 
-        public List<Client> List()
+        public List<Client> List() //création du Select
         {
             List<Client> Liste = new List<Client>();
 
@@ -47,7 +47,60 @@ namespace DAL
                 Liste.Add(Cli);
             }
 
+            Connex.Close();
             return Liste;
+            
+        }
+
+        public void UpDate(Client Cli) //création du Update
+        {
+            SqlConnection Connex = new SqlConnection("server=.; database=TP02; integrated security= true");
+            Connex.Open();
+
+            SqlCommand Reqt = new SqlCommand("update client set nom_client= @p2, prenom_client= @p3, adresse_client= @p4 where id_client = @p1 ", Connex);
+            Reqt.Parameters.AddWithValue("@p1", Cli.Id);
+            Reqt.Parameters.AddWithValue("@p2", Cli.Nom);
+            Reqt.Parameters.AddWithValue("@p3", Cli.Prenom);
+            Reqt.Parameters.AddWithValue("@p4", Cli.Adresse);
+
+            Reqt.ExecuteNonQuery();
+            Connex.Close();
+        }
+
+        public void Delete(Client Cli)
+        {
+
+            SqlConnection Connex = new SqlConnection("server=.; database=TP02; integrated security= true");
+            Connex.Open();
+
+            SqlCommand Reqt = new SqlCommand("delete from client where id_client = @p1", Connex);
+            Reqt.Parameters.AddWithValue("@p1", Cli.Id);
+
+            Reqt.ExecuteNonQuery();
+            Connex.Close();
+        }
+
+        public Client Find(int Id)
+        {
+            Client Enreg = new Client();
+            SqlConnection Connex = new SqlConnection("server=.; database=TP02; integrated security= true");
+            Connex.Open();
+
+            SqlCommand Reqt = new SqlCommand("select * from client where id_client = @p1", Connex);
+            Reqt.Parameters.AddWithValue("@p1", Id);
+
+            SqlDataReader Result = Reqt.ExecuteReader();
+
+            if (Result.Read())
+            {
+                Enreg.Id = Convert.ToInt32(Result["id_client"]);
+                Enreg.Nom = Convert.ToString(Result["nom_client"]);
+                Enreg.Prenom = Convert.ToString(Result["prenom_client"]);
+                Enreg.Adresse = Convert.ToString(Result["adresse_client"]);
+
+            } 
+
+            return Enreg;
         }
     }
 }
