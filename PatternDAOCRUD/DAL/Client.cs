@@ -14,6 +14,18 @@ namespace DAL
 
         public string Prenom { get; set; }
 
-        public string Adresse { get; set; }
+        public string Adresse { get; set; }
+
+
+        //++++ Pour remplir un ListBox avec plusieurs colonnnes : 
+        // public string NomComplet
+        // {
+        //     get
+        //     {
+        //         return Id + " " + Nom + " " + Prenom + " " + Adresse;
+        //     }
+        //      set { }
+        // }            // il suffira de l'appeler dans un listBox : listBox1.DisplayMember = "NomComplet";
+
     }
 }

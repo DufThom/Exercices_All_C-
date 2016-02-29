@@ -7,7 +7,7 @@ using DAL;
 
 namespace Test
 {
-    class Program
+    class Program //#################  Test, en version console, des Requêtes Sql ###########################
     {
         static void Main(string[] args)
         {
@@ -19,10 +19,10 @@ namespace Test
             //Console.WriteLine(c.Nom);
 
             // ++++ Test du List +++++++++++++++++++++++++++++++++++++++++++
-            foreach (Client c in data.List())
-            {
-                Console.WriteLine(c.Nom);
-            }
+            //foreach (Client c in data.List())
+            //{
+            //    Console.WriteLine(c.Nom);
+            //}
 
 
             //++++ test du Insert +++++++++++++++++++++++++++++++++
